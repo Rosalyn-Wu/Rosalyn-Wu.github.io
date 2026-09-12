@@ -3,33 +3,92 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Personal website of Rosalyn Wu.">
-  <title>Rosalyn Wu</title>
+  <meta name="description" content="Personal website of Rosalyn Wu, an aspiring engineering student in Vancouver.">
+  <title>Rosalyn Wu | Engineering Aspirant</title>
   <style>
+    :root { --ink:#14213d; --blue:#1d4e89; --mist:#eef4fb; --line:#cbd7e5; --muted:#50627a; }
     * { box-sizing: border-box; }
-    body { margin: 0; background: #f7f8fc; color: #18233a; font-family: Georgia, serif; line-height: 1.65; }
-    main { max-width: 760px; margin: 0 auto; padding: 72px 24px; }
-    header { border-bottom: 2px solid #1d4e89; padding-bottom: 30px; margin-bottom: 42px; }
-    h1 { font-size: clamp(2.8rem, 8vw, 4.8rem); font-weight: 500; line-height: 1; letter-spacing: -0.04em; margin: 0 0 20px; }
-    .intro { font-family: Arial, sans-serif; font-size: 1.15rem; max-width: 600px; margin: 0; }
-    section { margin: 0 0 36px; }
-    h2 { color: #1d4e89; font-family: Arial, sans-serif; font-size: .8rem; letter-spacing: .13em; text-transform: uppercase; margin: 0 0 12px; }
-    p { font-size: 1.08rem; margin: 0; }
-    .note { color: #56627a; font-style: italic; }
-    footer { border-top: 1px solid #cbd2df; color: #56627a; font-family: Arial, sans-serif; font-size: .88rem; padding-top: 22px; margin-top: 54px; }
+    body { margin:0; background:#f8fafc; color:var(--ink); font-family:Georgia, 'Times New Roman', serif; line-height:1.6; }
+    main { max-width:920px; margin:0 auto; padding:70px 24px; }
+    header { background:var(--ink); color:white; padding:48px; border-radius:4px; }
+    h1 { font-size:clamp(3rem,8vw,5.4rem); font-weight:500; line-height:.95; letter-spacing:-.05em; margin:0; }
+    .legal, .eyebrow, h2, .tag, .meta { font-family:Arial,sans-serif; }
+    .legal { color:#c8d9ef; font-size:.9rem; margin:14px 0 0; }
+    .intro { font-size:1.25rem; max-width:650px; margin:24px 0 0; }
+    section { margin-top:54px; }
+    h2 { color:var(--blue); font-size:.78rem; letter-spacing:.15em; text-transform:uppercase; margin:0 0 16px; }
+    .about { font-size:1.16rem; max-width:760px; }
+    .grid { display:grid; gap:16px; grid-template-columns:repeat(2,minmax(0,1fr)); }
+    article { background:white; border:1px solid var(--line); border-top:4px solid var(--blue); padding:24px; }
+    article.featured { grid-column:1/-1; background:var(--mist); }
+    h3 { font-size:1.35rem; line-height:1.2; margin:0 0 10px; }
+    p { margin:0; }
+    .meta { color:var(--muted); font-size:.86rem; margin-bottom:13px; }
+    .tag { display:inline-block; border:1px solid #9bb8d7; color:var(--blue); font-size:.72rem; letter-spacing:.08em; padding:4px 8px; margin:0 6px 10px 0; text-transform:uppercase; }
+    .honor { background:#fff; border-left:5px solid #c48a28; padding:24px; }
+    footer { border-top:1px solid var(--line); color:var(--muted); font-family:Arial,sans-serif; font-size:.86rem; margin-top:54px; padding-top:20px; }
+    @media (max-width:620px) { main{padding:24px 16px 42px;} header{padding:34px 26px;} .grid{grid-template-columns:1fr;} article.featured{grid-column:auto;} }
   </style>
 </head>
 <body>
   <main>
     <header>
+      <p class="eyebrow">Grade 12 student · Vancouver, British Columbia</p>
       <h1>Rosalyn Wu</h1>
-      <p class="intro">A curious student, thoughtful learner, and aspiring member of a university community.</p>
+      <p class="legal">Legal name: Yichen Wu</p>
+      <p class="intro">An aspiring engineering student interested in mathematics, software, artificial intelligence, and the systems that connect them.</p>
     </header>
-    <section><h2>About Me</h2><p>I am building this space to share the interests, experiences, and questions that shape my learning journey.</p></section>
-    <section><h2>Academic Interests</h2><p class="note">Coming soon — subjects, ideas, and projects I care about.</p></section>
-    <section><h2>Activities &amp; Projects</h2><p class="note">Coming soon — the communities and work that matter to me.</p></section>
-    <section><h2>Contact</h2><p class="note">Contact information will be added here.</p></section>
-    <footer>© 2026 Rosalyn Wu</footer>
+
+    <section>
+      <h2>About Me</h2>
+      <p class="about">I am a Grade 12 student at St. Lawrence in Vancouver, preparing to pursue engineering at university. I am especially drawn to the mathematical ideas behind engineering and to the way code, hardware, and careful design can turn an idea into a practical solution.</p>
+    </section>
+
+    <section>
+      <h2>Academic Interests</h2>
+      <p class="about">My interests lie at the intersection of mathematics and engineering. I hope to explore engineering at university and continue learning how mathematical thinking can guide the design of useful, responsible technologies.</p>
+    </section>
+
+    <section>
+      <h2>Activities &amp; Projects</h2>
+      <div class="grid">
+        <article class="featured">
+          <span class="tag">Team project</span><span class="tag">Science Expo 2026</span>
+          <h3>Drone Control and AI Vision Project</h3>
+          <p class="meta">Science Expo 2026 · Coquitlam, British Columbia</p>
+          <p>Collaborated with a team to build an interactive drone-control system. We used code on a computer to send commands that controlled the drone’s movement, rotation, flips, and camera. We also integrated AI to generate descriptions of images captured by the drone. In a further experiment, we used the drone camera to detect hand gestures and translate them into movement commands.</p>
+        </article>
+        <article>
+          <span class="tag">Leadership</span><span class="tag">38 hours</span>
+          <h3>International Student Mentor</h3>
+          <p class="meta">Richmond International Education &amp; J. N. Burnett Secondary School · 2025–2026</p>
+          <p>Supported new international students as they adjusted to a new school environment through campus tours, practical orientation, cultural guidance, and peer advice.</p>
+        </article>
+        <article>
+          <span class="tag">Community service</span><span class="tag">30 hours</span>
+          <h3>Community Arts Volunteer</h3>
+          <p class="meta">Canadian Rock Paintings Association · October 2025</p>
+          <p>Contributed to the “Bridge: The Connection to Peace” Art Exhibition and Competition, supporting community arts programming.</p>
+        </article>
+        <article>
+          <span class="tag">Community service</span><span class="tag">6 hours</span>
+          <h3>Gala Volunteer</h3>
+          <p class="meta">SDC Lawrence &amp; Rory “Once Upon a Shine” Gala · February 2026</p>
+          <p>Contributed service across morning and afternoon shifts at a community fundraising gala.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Academic Recognition</h2>
+      <div class="honor">
+        <h3>Certificate of Distinction, Sir Isaac Newton Exam</h3>
+        <p class="meta">Department of Physics · May 2026</p>
+        <p>Placed first among five participants at Forbest Academy in the annual Sir Isaac Newton Exam. Certificate issued under my legal name, Yichen Wu.</p>
+      </div>
+    </section>
+
+    <footer>© 2026 Rosalyn Wu · Vancouver, British Columbia</footer>
   </main>
 </body>
 </html>
